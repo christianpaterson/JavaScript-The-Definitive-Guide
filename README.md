@@ -1,10 +1,5 @@
 # Command-Line-Practice
 
-To download a repo from GitHub, I should use git clone.
-To connect a local repo to GitHub, I should use git init.
-
-I will use the command line every day!!
-
 <h2>In Command-Line-Practice . . .</h2>
 
 I will download a <em>GitHub project</em> to my local machine.
@@ -27,3 +22,5 @@ This README.md is edited from VSCode, and never via GitHub.
 Snapshots are always pushed from the command line.
 
 The first letter of commit messages should be capitalized.
+
+I will use the command line every day!!
