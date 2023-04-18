@@ -1,5 +1,3 @@
-# Command-Line-Practice
-
 <h2>In Command-Line-Practice . . .</h2>
 
 I will download a <em>GitHub project</em> to my local machine.
