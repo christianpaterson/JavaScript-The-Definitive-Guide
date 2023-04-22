@@ -22,3 +22,5 @@ Snapshots are always pushed from the command line.
 The first letter of commit messages should be capitalized.
 
 I will use the command line every day!!
+
+What should my next project be...?
