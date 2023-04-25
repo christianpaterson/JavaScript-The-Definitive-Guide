@@ -21,6 +21,4 @@ Snapshots are always pushed from the command line.
 
 The first letter of commit messages should be capitalized.
 
-I will use the command line every day!!
-
-What should my next project be...?
+Most commonly used JavaScript operators have Left to Right Associativity (the order in whch multiple operations of the same precedence are performed). However, the ternary operator, assignment, exponentiating, and unary operators have Right to Left Associativity.
