@@ -17,6 +17,8 @@ The steps are:
 
 I am thinking of renaming this file 'JavaScript: The Definitive Guide' Notes. I'm reading the book and will decide this week if I shall make a GitHub repo for my notes or not.
 
+I will gradually transform this document into a repo describing what I have learned from "The Definitive Guide." I am interested to learn how I might do this. For example, how do I even rename a GitHub repository?
+
 This README.md is edited from VSCode, and never via GitHub.
 
 Snapshots are always pushed from the command line.
