@@ -15,6 +15,8 @@ The steps are:
 
 <h4>By the way . . .</h4>
 
+I am thinking of renaming this file 'JavaScript: The Definitive Guide' Notes. I'm reading the book and will decide this week if I shall make a GitHub repo for my notes or not.
+
 This README.md is edited from VSCode, and never via GitHub.
 
 Snapshots are always pushed from the command line.
