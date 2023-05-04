@@ -23,6 +23,4 @@ This README.md is edited from VSCode, and never via GitHub.
 
 Snapshots are always pushed from the command line.
 
-The first letter of commit messages should be capitalized.
-
 Most commonly used JavaScript operators have Left to Right Associativity (the order in whch multiple operations of the same precedence are performed). However, the ternary operator, assignment, exponentiating, and unary operators have Right to Left Associativity.
