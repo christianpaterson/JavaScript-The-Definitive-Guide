@@ -19,8 +19,6 @@ I am thinking of renaming this file 'JavaScript: The Definitive Guide' Notes. I'
 
 I will gradually transform this document into a repo describing what I have learned from "The Definitive Guide." I am interested to learn how I might do this. For example, how do I even rename a GitHub repository?
 
-I want to build a full crud project in the future.
-
 Snapshots are always edited from VSCode and pushed from the command line.
 
 Most commonly used JavaScript operators have Left to Right Associativity (the order in whch multiple operations of the same precedence are performed). However, the ternary operator, assignment, exponentiating, and unary operators have Right to Left Associativity.
