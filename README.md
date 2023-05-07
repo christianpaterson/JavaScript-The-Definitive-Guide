@@ -127,6 +127,31 @@ let octal = "0o" + n.toString(8); octal == "0o21"
 let hex = "0x" + n.toString(16); hex == "0x11"
 
 
+3.9.3
+Object to primitive conversion algorithms:
+• The prefer-string algorithm first tries the toString() method. If the method is defined and returns a primitive value, then JavaScript uses that primitive value (even if it is not a string!). If toString() does not exist or if it returns an object, then JavaScript tries the valueOf() method. If that method exists and returns a primitive value, then JavaScript uses that value. Otherwise, the conversion fails with a TypeError.
+• The prefer-number algorithm works like the prefer-string algorithm, except that it tries value0f() first and toString() second.
+• The no-preference algorithm depends on the class of the object being converted. If the object is a Date object, then JavaScript uses the prefer-string algorithm. For any other object, JavaScript uses the prefer-number algorithm.
+
+Number ([]) => 0: this is unexpected!
+Number ([99])  => 99: really?
+
+The object-to-number conversion first converts the object to a primitive using the prefer-number algorithm, then converts the resulting primitive value to a number.
+The prefer-number algorithm tries value0f() first and then falls back on tostring().
+
+But the Array class inherits the default valueOf() method, which does not return a primitive value. So when we try to convert an array to a number, we end up invoking the toString() method of the array. Empty arrays convert to the empty string. And the empty string converts to the number 0. An array with a single element converts to the same string that that one element does. If an array contains a single number, that number is converted to a string, and then back to a number.
+
+
+3.10.1
+let x = 2, y = x*x;
+Initializers can use previously declared variables that were declared within the same statement.
+
+Destructuring Assignment
+let [x,y] = [1,2];   => x=1, y=2
+[x,y] = [y,x];        => swap values
+
+
+
 
 4.7
 
