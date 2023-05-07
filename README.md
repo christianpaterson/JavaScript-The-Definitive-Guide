@@ -120,6 +120,29 @@ s.toString()    => "Symbol(shared)"
 Symbol. keyFor(t)    => "shared"
 
 
+3.8
+Objects (and arrays) are mutable. They are only equal if they refer to the same underlying object. Primitives are immutable, and are the same if their values are the same. Str === string if all letters are the same. 
+
+let a = [];
+let b = a;
+a === b => true
+
+In ES6, copy arrays with let c = Array.from(b);
+(faster than with a loop)
+a===c => false 
+
+
+3.9.2 Type Conversions
+
+Number ("3"); or +x
+String(false); or x + “”
+Boolean([]); or !!x
+
+let n = 17;
+let binary = "0b" + n.toString(2); binary == "0b10001"
+let octal = "0o" + n.toString(8); octal == "0o21"
+let hex = "0x" + n.toString(16); hex == "0x11"
+
 
 
 4.7
