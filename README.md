@@ -1,26 +1,5 @@
 <h2>JavaScript: The Definitive Guide . . .</h2>
 
-Snapshots are always edited from VSCode and pushed from the command line.
-
-I will download a <em>GitHub project</em> to my local machine.
-
-The steps are:
-<ol>
-    <li>git clone</li>
-    <li>git status</li>
-    <li>Edit .gitignore if needed</li>
-    <li>git remote -v (to check)</li>
-    <li>git add .</li>
-    <li>git commit - ''</li>
-    <li>git push</li>
-</ol>
-
-<h4>By the way . . .</h4>
-
-I am thinking of renaming this file 'JavaScript: The Definitive Guide' Notes. I'm reading the book and will decide this week if I shall make a GitHub repo for my notes or not.
-
-I will gradually transform this document into a repo describing what I have learned from "The Definitive Guide." I am interested to learn how I might do this. For example, how do I even rename a GitHub repository?
-
 Here goes...
 
 Here are my notes from 05/06/23:
@@ -118,6 +97,10 @@ let t = Symbol.for("shared");
 s === t    => true
 s.toString()    => "Symbol(shared)"
 Symbol. keyFor(t)    => "shared"
+
+
+
+Notes from 05/07/23:
 
 
 3.8
