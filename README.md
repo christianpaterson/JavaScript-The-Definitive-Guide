@@ -118,3 +118,10 @@ let t = Symbol.for("shared");
 s === t    => true
 s.toString()    => "Symbol(shared)"
 Symbol. keyFor(t)    => "shared"
+
+
+
+
+4.7
+
+Most commonly used JavaScript operators have Left to Right Associativity (the order in whch multiple operations of the same precedence are performed). However, the ternary operator, assignment, exponentiating, and unary operators have Right to Left Associativity.
