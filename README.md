@@ -195,27 +195,12 @@ d instanceOf Date  => true
 
 Notes from 05/09/23
 
-Chapter 5: Statements
-5.1 Expression Statements
-5.2 Compound and Empty Statements
-5.3 Conditionals
-5.3.1 if
-5.3.2 else if
-5.3.3 switch
-5.4 Loops
-5.4.1 while
-5.4.2 do/while
-5.4.3 for
-5.4.4 for/of
-5.4.5 for/in
-5.5 Jumps
-5.5.1 Labeled Statements
-5.5.2 break
-5.5.3 continue
-5.5.4 return
-5.5.5 yield
-5.5.6 throw
-5.5.7 try/catch/finally
+<em><b>Chapter 5: Statements</em></b>
+
+5.1-5.3 Expression Statements, Compound and Empty Statements, and Conditionals
+
+5.4-5.5 Loops and Jumps
+
 5.6 Miscellaneous Statements
 5.6.1 with
 5.6.2 debugger
@@ -225,4 +210,3 @@ Chapter 5: Statements
 5.7.2 function
 5.7.3 class
 5.7.4 import and export
-5.8 Summary of JavaScript Statements
