@@ -153,6 +153,43 @@ let [x,y] = [1,2];   => x=1, y=2
 
 
 
+Notes from 05/08/23
+
+Chapter 4: Expressions and Operators
+
+
+4.4.1 Conditional property access
+expression?.identifier
+It is “short-circuiting”
+let a = {b:null}
+a.b?.c.d    => undefined  (d will not get evaluated)
+
+4.5.1 Conditional invocation expressions
+f?.(x++)   => if f is null, x is not incremented 
+
+4.7
+Only ternary, assignment, exponentiate, and unitary operators are Right (right to left) Associative. 
+
+4.8.1
+
+1 + {}    =>    "1[object Object]": obj->str, concat
+true + true    => 2: addition after boolean-to-number
+2 + null      => 2: addition after null converts to 0
+2 + undefined    => NaN: addition after undefined converts to NaN
+
+
+let data = {} or []
+“x” in data
+“0” in data
+
+d instanceOf Date  => true
+
+?:
+?? First-defined
+&& || idiomatic use
+
+
+
 4.7
 
 Most commonly used JavaScript operators have Left to Right Associativity (the order in whch multiple operations of the same precedence are performed). However, the ternary operator, assignment, exponentiating, and unary operators have Right to Left Associativity.
