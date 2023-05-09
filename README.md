@@ -168,7 +168,12 @@ a.b?.c.d    => undefined  (d will not get evaluated)
 f?.(x++)   => if f is null, x is not incremented 
 
 4.7
-Only ternary, assignment, exponentiate, and unitary operators are Right (right to left) Associative. 
+Only ternary, assignment, exponentiate, and unitary operators are Right (right to left) Associative.
+
+Most commonly used JavaScript operators have Left to Right Associativity
+(the order in whch multiple operations of the same precedence are 
+performed). However, the ternary operator, assignment, exponentiating, and 
+unary operators have Right to Left Associativity.
 
 4.8.1
 
@@ -187,9 +192,3 @@ d instanceOf Date  => true
 ?:
 ?? First-defined
 && || idiomatic use
-
-
-
-4.7
-
-Most commonly used JavaScript operators have Left to Right Associativity (the order in whch multiple operations of the same precedence are performed). However, the ternary operator, assignment, exponentiating, and unary operators have Right to Left Associativity.
