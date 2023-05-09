@@ -200,14 +200,7 @@ Notes from 05/09/23
 5.1-5.3
 Expression Statements, Compound and Empty Statements, and Conditionals
 
-5.4-5.5 Loops and Jumps
+More Expressions!!
 
-5.6 Miscellaneous Statements
-5.6.1 with
-5.6.2 debugger
-5.6.3 “use strict”
-5.7 Declarations
-5.7.1 const, let, and var
-5.7.2 function
-5.7.3 class
-5.7.4 import and export
+5.4-5.5 Loops and Jumps
+5.6-5.7 with, debugger, “use strict”, function, class, import and export
