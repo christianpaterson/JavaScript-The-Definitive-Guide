@@ -4,7 +4,7 @@ Here goes...
 
 Here are my notes from 05/06/23:
 
-<em><b>Chapter 3: Types, Values, and Variables</em></b>
+<em><b>Chapter 3: Types, Values, and Variables</b></em>
 
 JavaScript supports an object-oriented programming style. Loosely, this means that rather than having globally defined functions to operate on values of various types, the types themselves define methods for working with values.
 
@@ -15,10 +15,11 @@ a.sort(); === The object-oriented version of sort(a).
 Technically, it is only JavaScript objects that have methods. But numbers, strings, boolean, and symbol values behave as if they have methods.
 
 
-<em>3.3 Strings</em>
+<b>3.3 Strings</b>
+
 If using emojis, or any character represented by 32 bits (surrogate pair). In ES6 strings are iterable, and if you use the for/of loop or ... operator with a string, it will iterate the actual characters of the string, not the 16-bit values.
 
-<em>3.3.1</em>
+3.3.1
 'two\nlines'
 
 "one\
@@ -32,8 +33,7 @@ JS: ‘single-quotes’
 HTML: “double-quotes” 
 
 
-<em>3.3.3</em>
-
+3.3.3
 str.length
 substring === slice
 
@@ -58,7 +58,7 @@ These are the differences:
 • The indexOf() method cannot take powerful search values (regular expressions).
 
 
-<em>3.3.5 Pattern Matching</em>
+<b>3.3.5 Pattern Matching</b>
 
 Global, case-insensitive match:
 let string = “The rain in SPAIN stays mainly in the plain”;
@@ -70,7 +70,7 @@ x !== x ONLY EVER TRUE W NaN
 There is also isNaN()
 
 
-<em>3.6</em>
+3.6
 let sym = Symbol(“propertyname”);
 
 This function never returns the same value twice, even when called with the same argument. This means that if you call Symbol() to obtain a Symbol value, you can safely use that value as a property name to add a new property to an object and do not need to worry that you might be overwriting an existing property with the same name.
@@ -102,7 +102,6 @@ Symbol. keyFor(t)    => "shared"
 
 Notes from 05/07/23:
 
-
 3.8
 Objects (and arrays) are mutable. They are only equal if they refer to the same underlying object. Primitives are immutable, and are the same if their values are the same. Str === string if all letters are the same. 
 
@@ -115,7 +114,7 @@ In ES6, copy arrays with let c = Array.from(b);
 a===c => false 
 
 
-3.9.2 Type Conversions
+<b>3.9.2 Type Conversions</b>
 
 Number ("3"); or +x
 String(false); or x + “”
@@ -152,18 +151,19 @@ let [x,y] = [1,2];   => x=1, y=2
 
 
 
-
 Notes from 05/08/23
 
-<em><b>Chapter 4: Expressions and Operators</em></b>
+<em><b>Chapter 4: Expressions and Operators</b></em>
 
-4.4.1 Conditional property access
+<b>4.4.1 Conditional property access</b>
+
 expression?.identifier
 It is “short-circuiting”
 let a = {b:null}
 a.b?.c.d    => undefined  (d will not get evaluated)
 
-4.5.1 Conditional invocation expressions
+<b>4.5.1 Conditional invocation expressions</b>
+
 f?.(x++)   => if f is null, x is not incremented 
 
 4.7.5
@@ -175,7 +175,6 @@ performed). However, the ternary operator, assignment, exponentiating, and
 unary operators have Right to Left Associativity.
 
 4.8.1
-
 1 + {}    =>    "1[object Object]": obj->str, concat
 true + true    => 2: addition after boolean-to-number
 2 + null      => 2: addition after null converts to 0
@@ -193,11 +192,13 @@ d instanceOf Date  => true
 && || idiomatic use
 
 
+
 Notes from 05/09/23
 
-<em><b>Chapter 5: Statements</em></b>
+<em><b>Chapter 5: Statements</b></em>
 
-5.1-5.3 Expression Statements, Compound and Empty Statements, and Conditionals
+5.1-5.3
+Expression Statements, Compound and Empty Statements, and Conditionals
 
 5.4-5.5 Loops and Jumps
 
