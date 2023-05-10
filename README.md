@@ -2,6 +2,7 @@
 
 Here goes...
 
+
 Here are my notes from 05/06/23:
 
 <em><b>Chapter 3: Types, Values, and Variables</b></em>
@@ -13,7 +14,6 @@ To sort the elements of an array a, for example, we don't pass a to a sort () fu
 a.sort(); === The object-oriented version of sort(a).
 
 Technically, it is only JavaScript objects that have methods. But numbers, strings, boolean, and symbol values behave as if they have methods.
-
 
 <b>3.3 Strings</b>
 
@@ -31,7 +31,6 @@ line"
 
 JS: ‘single-quotes’
 HTML: “double-quotes” 
-
 
 3.3.3
 str.length
@@ -57,7 +56,6 @@ These are the differences:
 • The search() method cannot take a second start position argument.
 • The indexOf() method cannot take powerful search values (regular expressions).
 
-
 <b>3.3.5 Pattern Matching</b>
 
 Global, case-insensitive match:
@@ -68,7 +66,6 @@ Does equal:    Null == undefined     true
 Does not strictly equal:   Null !== undefined     true
 x !== x ONLY EVER TRUE W NaN
 There is also isNaN()
-
 
 3.6
 let sym = Symbol(“propertyname”);
@@ -113,7 +110,6 @@ In ES6, copy arrays with let c = Array.from(b);
 (faster than with a loop)
 a===c => false 
 
-
 <b>3.9.2 Type Conversions</b>
 
 Number ("3"); or +x
@@ -124,7 +120,6 @@ let n = 17;
 let binary = "0b" + n.toString(2); binary == "0b10001"
 let octal = "0o" + n.toString(8); octal == "0o21"
 let hex = "0x" + n.toString(16); hex == "0x11"
-
 
 3.9.3
 Object to primitive conversion algorithms:
@@ -139,7 +134,6 @@ The object-to-number conversion first converts the object to a primitive using t
 The prefer-number algorithm tries value0f() first and then falls back on tostring().
 
 But the Array class inherits the default valueOf() method, which does not return a primitive value. So when we try to convert an array to a number, we end up invoking the toString() method of the array. Empty arrays convert to the empty string. And the empty string converts to the number 0. An array with a single element converts to the same string that that one element does. If an array contains a single number, that number is converted to a string, and then back to a number.
-
 
 3.10.1
 let x = 2, y = x*x;
@@ -180,7 +174,6 @@ true + true    => 2: addition after boolean-to-number
 2 + null      => 2: addition after null converts to 0
 2 + undefined    => NaN: addition after undefined converts to NaN
 
-
 let data = {} or []
 “x” in data
 “0” in data
@@ -200,7 +193,56 @@ Notes from 05/09/23
 5.1-5.3
 Expression Statements, Compound and Empty Statements, and Conditionals
 
-More Expressions!!
+More Statements!!
 
 5.4-5.5 Loops and Jumps
 5.6-5.7 with, debugger, “use strict”, function, class, import and export
+
+
+
+<em><b>Chapter 6: Objects</b></em>
+
+<b>6.3.2 Inheritance</b>
+
+The fact that inheritance occurs when querying properties but not when setting them is a key feature of JavaScript because it allows us to selectively override inherited properties.
+
+If o is not extensible, then no new properties can be defined on it.
+
+In operator.
+
+For/in runs for each enumerable property.
+Enumerable literally just means a for/in loop returns it. That’s its only definition. For/in loop is meant to iterate all enumerable properties, both owned and inherited. You can use Object.keys() to get only owned properties. Note, however, that a property will not be enumerated if a property by that same name has already been enumerated, or even if a non-enumerable property by the same name has already been considered.
+
+One reason to assign properties from one object into another is when you have an object that defines default values for many properties and you want to copy those default properties into another object if a property by that name does not already exist in that object. Using Object.assign() naively will not do what you want:
+
+
+Object.assign(o, defaults); // overwrites everything in o with defaults
+
+Instead, what you can do is to create a new object, copy the defaults into it, and then override those defaults with the properties in o:
+
+o = Object.assign ({}, defaults, o);
+
+
+<em><b>Chapter 7: Arrays</b></em>
+
+If it’s iterable, a for/of loop works (strings and sets included)
+
+let a = Array.from(arraylike function() {});
+move efficient than new; map;
+
+The following function searches an array for a specified value and returns an array of all matching indexes. This demonstrates how the second argument to indexof() car be used to find matches beyond the first.
+
+function findall(a, x) {
+
+    let results = [],
+    len = a. length,
+    pos = 0;
+
+    while(pos < len) {
+        pos = a. indexOf (x, pos);
+        if (pos === -1)  break;
+        results.push (pos);
+        pos = pos + 1;
+    }
+    return results;
+}
