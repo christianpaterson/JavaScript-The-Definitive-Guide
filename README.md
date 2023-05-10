@@ -246,3 +246,25 @@ function findall(a, x) {
     }
     return results;
 }
+
+<b>7.9 Arraylike Objects</b>
+DOM text nodes have a numeric length property and may need to be excluded with an additional o.nodeType !== 3 test.
+
+
+<em><b>Chapter 8: Arrays</b></em>
+
+Each function invocation has an invocation context, the value of the this keyword. 
+
+Function property of object? Method
+
+Functions designed to initialize a newly created object are called constructors.
+
+
+
+Functions are objects. You can assign functions to variables and pass them to other functions, for example. You can set properties on them and even invoke methods on them.
+
+Function definitions can be nested within other functions, and they have access to any variables that are in scope where they are defined. This means that JavaScript functions are closures, and it enables important and powerful programming techniques.
+
+Note that function expressions are sometimes defined and immediately invoked:
+let f = (function(x) {return x*x + x -x/2;}(12));
+console.log(f);  => 150
