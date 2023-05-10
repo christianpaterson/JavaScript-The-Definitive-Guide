@@ -268,3 +268,22 @@ Function definitions can be nested within other functions, and they have access 
 Note that function expressions are sometimes defined and immediately invoked:
 let f = (function(x) {return x*x + x -x/2;}(12));
 console.log(f);  => 150
+
+
+
+Note that the function name is optional for functions defined as expressions, and most of the preceding function expressions we've shown omit it. A function declaration actually declares a variable and assigns a function object to it. A function expres-sion, on the other hand, does not declare a variable: it is up to you to assign the newly defined function object to a constant or variable if you are going to need to refer to it multiple times. It is a good practice to use const with function expressions so you don't accidentally overwrite your functions by assigning new values.
+
+When you use the declaration form, the function objects are created before the code that contains them starts to run, and the definitions are hoisted so that you can call these functions from code that appears above the definition statement. This is not true for functions defined as expressions, however: these functions do not exist until the expression that defines them are actually evaluated. Furthermore, in order to invoke a function, you must be able to refer to it, and you can't refer to a function defined as an expression until it is assigned to a variable.
+
+
+Arrow functions differ from functions defined in other ways in a critical way: they inherit the value of the this keyword from the environment in which they are defined rather than defining their own invocation context, as functions defined in other ways do. This is an important and very useful feature of arrow functions, and we'll return to it again later in this chapter. Arrow functions also differ from other functions in that they do not have a prototype property, which means that they cannot be used as constructor functions for new classes.
+
+
+For function invocation in non-strict mode, the invocation context (the this value) is the global object. In strict mode, however, the invocation context is undefined. Note that functions defined using the arrow syntax behave differently: they always inherit the this value that is in effect where they are defined. 
+
+Functions written to be invoked as functions (and not as methods) do not typically use the this keyword at all. 
+
+The keyword can be used, however, to determine whether strict mode is in effect:
+const strict = (function() { return I this; ]());
+
+<b>8.2.2 Method Invocation (very interesting!)</b>
