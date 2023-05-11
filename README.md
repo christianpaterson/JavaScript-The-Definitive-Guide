@@ -287,3 +287,24 @@ The keyword can be used, however, to determine whether strict mode is in effect:
 const strict = (function() { return I this; ]());
 
 <b>8.2.2 Method Invocation (very interesting!)</b>
+
+When methods return objects, you can use the return value of one method invocation as part of a subsequent invocation. This results in a series (or "chain") of method invocations as a single expression. When working with Promise-based asynchronous operations, for example, it is common to write code structured like this:
+
+// Run three asynchronous operations in sequence, handling errors
+
+
+doStepOne().then(doStepTwo).then(doStepThree).catch(handleErrors);
+
+
+When you write a method that does not have a return value of its own, consider having the method return this. If you do this consistently throughout your API, you will enable a style of programming known as method chaining in which an object can be named once and then multiple methods can be invoked on it:
+
+new Square().×(100).y(100).size(50).
+outline("red").fill("blue").draw();
+
+
+This is not scoped the way variables are and except for arrow functions nested functions do not inherent the this value of the containing function. 
+
+If a nested function is invoked as a method, its this value is the object it was invoked on.
+
+If a nested function (that is not an arrow function) is invoked as a function, then its this value will be either the global object (non-strict mode) or undefined (strict mode). It is a common mistake to assume that a nested function defined within a method and invoked as a function can use this to obtain the invocation context of the method.
+
