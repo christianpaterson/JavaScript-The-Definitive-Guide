@@ -251,7 +251,7 @@ function findall(a, x) {
 DOM text nodes have a numeric length property and may need to be excluded with an additional o.nodeType !== 3 test.
 
 
-<em><b>Chapter 8: Arrays</b></em>
+<em><b>Chapter 8: Functions</b></em>
 
 Each function invocation has an invocation context, the value of the this keyword. 
 
