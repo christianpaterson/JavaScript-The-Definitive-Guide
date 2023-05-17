@@ -316,3 +316,14 @@ Length specifies Arity - the number of parameters it declares in its parameter l
 In computer science, a closure is a function that has an environment of its own. In this environment, there is at least one bound variable (a name that has a value, such as a number). The closure's environment keeps the bound variables in memory between uses of the closure.
 
 A function defined inside of and returned by an enclosing function retains access to its lexical scope and can therefore read and write the variables defined inside the outer function. Functions used in this way are called closures, and this is a technique that is worth understanding.
+
+
+<em><b>Chapter 9: Classes</b></em>
+
+"Objects in JavaScript can be thought of a a unique set of properties, different from every other object.  It is often useful, however, to define a <em>class</em> of objects that share certain properties. Members, or instances, of a class have their own properties to hold or define their state, but they also have methods that define their behavior. These methods are defined by the class and shared by all instances."
+
+JavaScript uses prototypal inheritance. If two objects inherit properties (usually methods) from the same prototype, they are said to be instances of the same class!
+
+I don't anticipate using classes too much with JavaScript! But I have used them extensively in Java and it is interesting to the ways in which they are applicable and useful in JavaScript as well :)
+
+I know I will continue to use JS classes when creating Date objects, making XMLHttpRequests, and creating custom classes or objects. 
