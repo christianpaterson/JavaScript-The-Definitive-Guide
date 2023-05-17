@@ -308,3 +308,11 @@ If a nested function is invoked as a method, its this value is the object it was
 
 If a nested function (that is not an arrow function) is invoked as a function, then its this value will be either the global object (non-strict mode) or undefined (strict mode). It is a common mistake to assume that a nested function defined within a method and invoked as a function can use this to obtain the invocation context of the method.
 
+<b>8.7.1</b>
+Length specifies Arity - the number of parameters it declares in its parameter list, which is usually the number of arguments that the function expects. If it has a rest parameter, that parameter is not counted for the purposes of the length property. 
+
+
+
+In computer science, a closure is a function that has an environment of its own. In this environment, there is at least one bound variable (a name that has a value, such as a number). The closure's environment keeps the bound variables in memory between uses of the closure.
+
+A function defined inside of and returned by an enclosing function retains access to its lexical scope and can therefore read and write the variables defined inside the outer function. Functions used in this way are called closures, and this is a technique that is worth understanding.
