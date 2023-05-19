@@ -326,4 +326,23 @@ JavaScript uses prototypal inheritance. If two objects inherit properties (usual
 
 I don't anticipate using classes too much with JavaScript! But I have used them extensively in Java and it is interesting to the ways in which they are applicable and useful in JavaScript as well :)
 
-I know I will continue to use JS classes when creating Date objects, making XMLHttpRequests, and creating custom classes or objects. 
+I know I will continue to use JS classes when creating Date objects, making XMLHttpRequests, and creating custom classes or objects.
+
+
+<em><b>Chapter 15: JavaScript in Web Browsers</b></em>
+
+15.5.1 pg 460 (top) Basically, the document expands to fill the whole viewport if it’s smaller. 
+
+
+15.12.1 Storage Events
+Whenever the data stored in localStorage changes, the browser triggers a "storage" event on any other Window objects to which that data is visible (but not on the window that made the change). If a browser has two tabs open to pages with the same origin, and one of those pages stores a value in localStorage, the other tab will receive a "storage" event.
+
+Register a handler for "storage" events either by setting window.onstorage or by calling window.addEventListener () with event type "storage".
+
+
+17.4 If you are trying out someone else's javascript project, then one of the first things you will often do after downloading their code is to type pm install. This reads the dependencies listed in the package JSON file and downloads the third-party packages that the project needs and saves them in a node_modules/ directory.
+
+You can also type npm install <package-name> to install a particular package to your project's node_modules/ directory:
+$ npm install express
+
+In addition to installing the named package, pm also makes a record of the dependency in the package.json file for the project. Recording dependencies in this way is what allows others to install those dependencies simply by typing pm install.
