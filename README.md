@@ -337,7 +337,7 @@ I know I will continue to use JS classes when creating Date objects, making XMLH
 15.12.1 Storage Events
 Whenever the data stored in localStorage changes, the browser triggers a "storage" event on any other Window objects to which that data is visible (but not on the window that made the change). If a browser has two tabs open to pages with the same origin, and one of those pages stores a value in localStorage, the other tab will receive a "storage" event.
 
-Register a handler for "storage" events either by setting window.onstorage or by calling window.addEventListener () with event type "storage".
+Register a handler for "storage" events either by setting window.onstorage or by calling window.addEventListener() with event type "storage".
 
 
 17.4 If you are trying out someone else's javascript project, then one of the first things you will often do after downloading their code is to type pm install. This reads the dependencies listed in the package JSON file and downloads the third-party packages that the project needs and saves them in a node_modules/ directory.
